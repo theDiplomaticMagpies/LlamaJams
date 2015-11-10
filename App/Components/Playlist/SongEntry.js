@@ -194,7 +194,7 @@ var SongEntry = React.createClass({
       this.setState({ searchResults: this.state.searchResults.slice(0) })
       this.forceUpdate();
     }
-    SC.get('http://api.soundcloud.com/tracks/', { q: inputSearch, limit: 7 }, function(tracks) {
+    SC.get('https://api.soundcloud.com/tracks/', { q: inputSearch, limit: 7 }, function(tracks) {
     // Display each song title and an option to add '+' to host playlist
       var array = [];
 
