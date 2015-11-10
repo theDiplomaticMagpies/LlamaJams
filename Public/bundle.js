@@ -20680,12 +20680,12 @@
 	Fireproof.bless(Promise);
 
 	// create reference to database
-	var ref = new Firebase('https://magpiejammies.firebaseio.com/');
+	var ref = new Firebase('https://lldjmagpie.firebaseio.com/');
 	// 'promisable' reference
 	var fpRef = new Fireproof(ref);
 
 	// use database secret for token generator
-	var tokenGenerator = new FirebaseTokenGenerator('cSQaavmPHldEO4F7vOcOJUmQFp7g6ebVKtQGR04D');
+	var tokenGenerator = new FirebaseTokenGenerator('yKNCju1e82LBAjOuWo2TS2RWpORQPM2cYSjJb84G');
 
 	module.exports = {
 
@@ -20712,7 +20712,7 @@
 	      playlistCode: playlistCode
 	    };
 
-	    var playlistRef = new Firebase("https://magpiejammies.firebaseio.com/" + playlistCode);
+	    var playlistRef = new Firebase("https://lldjmagpie.firebaseio.com/" + playlistCode);
 
 	    // set the refactored data in database with playlistCode as item name
 	    playlistRef.set(refactored);
@@ -28475,7 +28475,7 @@
 	  //background color is a state so that it could be used for changing the css when it renders
 	  getInitialState: function getInitialState() {
 	    return {
-	      backgroundColor: '#ffd042'
+	      backgroundColor: '#58575d'
 	    };
 	  },
 
@@ -28551,7 +28551,7 @@
 	  // your playlist code.
 	  loadSongsFromServer: function loadSongsFromServer(receivedCode) {
 	    this.items = [];
-	    this.firebaseRef = new Firebase('https://magpiejammies.firebaseio.com/' + receivedCode + '/playlist');
+	    this.firebaseRef = new Firebase('https://lldjmagpie.firebaseio.com/' + receivedCode + '/playlist');
 
 	    this.firebaseRef.on('child_added', (function (snapshot) {
 	      var eachSong = snapshot.val();

@@ -29,7 +29,7 @@ var SongEntry = React.createClass({
   // your playlist code.
   loadSongsFromServer: function(receivedCode) {
     this.items = [];
-    this.firebaseRef = new Firebase('https://magpiejammies.firebaseio.com/' + receivedCode + '/playlist');
+    this.firebaseRef = new Firebase('https://lldjmagpie.firebaseio.com/' + receivedCode + '/playlist');
 
     this.firebaseRef.on('child_added', function(snapshot) {
       var eachSong = snapshot.val();
